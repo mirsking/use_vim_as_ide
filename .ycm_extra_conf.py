@@ -51,12 +51,12 @@ flags = [
     '-Wno-padded', 
     '-Wno-old-style-cast',
     '-Wno-weak-vtables',
-    '-x', 
-    'c++', 
-    '-I', 
-    '.', 
-    '-isystem', 
-    '/usr/include/', 
+    '-x', 'c++', 
+    '-I', '.', 
+    '-I', 'src', 
+    '-I', 'include', 
+    '-isystem', '/usr/include/', 
+    '-isystem', '/usr/local/include',
 ]
 
 

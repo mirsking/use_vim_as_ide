@@ -39,12 +39,17 @@ nmap <Leader>Q :qa!<CR>
 nnoremap nw <C-W><C-W>
 " 跳转至右方的窗口
 nnoremap <Leader>lw <C-W>l
+map <C-l> <C-W>l
 " 跳转至方的窗口
 nnoremap <Leader>hw <C-W>h
+map <C-h> <C-W>h
 " 跳转至上方的子窗口
 nnoremap <Leader>kw <C-W>k
+map <C-k> <C-W>k
 " 跳转至下方的子窗口
+map <C-j> <C-W>j
 nnoremap <Leader>jw <C-W>j
+
 
 " 定义快捷键在结对符之间跳转
 nmap <Leader>M %
@@ -274,7 +279,7 @@ let g:SignatureMap = {
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边
 let tagbar_left=1
 " 设置显示／隐藏标签列表子窗口的快捷键。速记：identifier list by tag
-nnoremap <Leader>ilt :TagbarToggle<CR>
+nnoremap <Leader>lt :TagbarToggle<CR>
 " 设置标签子窗口的宽度
 let tagbar_width=32
 " tagbar 子窗口中不显示冗余帮助信息
@@ -457,7 +462,7 @@ nmap <Leader>man :Man 3 <cword><CR>
 " 工程文件浏览
 
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
-nmap <Leader>fl :NERDTreeToggle<CR>
+nmap <Leader>lf :NERDTreeToggle<CR>
 " 设置 NERDTree 子窗口宽度
 let NERDTreeWinSize=22
 " 设置 NERDTree 子窗口位置
@@ -475,11 +480,11 @@ let NERDTreeAutoDeleteBuffer=1
 " 多文档编辑
  
 " 显示/隐藏 MiniBufExplorer 窗口
-map <Leader>bl :MBEToggle<cr>
+map <Leader>lb :MBEToggle<cr>
 
 " buffer 切换快捷键
-map <C-Tab> :MBEbn<cr>
-map <C-S-Tab> :MBEbp<cr>
+map <C-i> :MBEbn<cr>
+map <C-u> :MBEbp<cr>
 
 " <<
 
@@ -505,8 +510,8 @@ map <leader>rs :source my.vim<cr>
 " <<
  
 " 设置快捷键实现一键编译及运行
-nmap <Leader>m :wa<CR> :cd build/<CR> :!rm -rf main<CR> :!cmake CMakeLists.txt<CR>:make<CR><CR> :cw<CR> :cd ..<CR>
-nmap <Leader>g :wa<CR>:cd build/<CR>:!rm -rf main<CR>:!cmake CMakeLists.txt<CR>:make<CR><CR>:cw<CR>:cd ..<CR>:!build/main<CR>
+nmap <Leader>m :wa<CR> :cd build/<CR> :!cmake ../CMakeLists.txt<CR> :make<CR> :cw<CR> :cd ..<CR>
+nmap <Leader>g :wa<CR>:cd build/<CR>:!rm -rf main<CR>:!cmake ../CMakeLists.txt<CR>:make<CR><CR>:cw<CR>:cd ..<CR>:!build/main<CR>
 
 " >>
 " 快速选中结对符内的文本
